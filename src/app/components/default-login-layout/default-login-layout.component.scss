@@ -1,97 +1,69 @@
-// @import "../../../styles/variables.scss";
-
-// main {
-//     height: 100%;    
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: center;
-    
-//     .form-section {
-//         height: 100%;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
-//         flex-grow: 0.3;
-//         padding: 0 35px;
-//         background-color: greenyellow;
-
-//         h2 {
-//             font-size: 20px;
-//             font-weight: bold;
-//         }
-
-//         button {
-//             width: 100%;
-//             border-radius: 8px;
-//             font-size: 16px;
-//             font-weight: 500;
-//             border: none;
-//             background-color: transparent;
-
-//             // &.brn-primary {}
-//         }
-//     }
-
-//     .main-section {
-//         height: 100%;
-//         gap: 8px;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
-
-//         flex-grow: 1;
-//         background-color: $gray-bg;
-//     }
-
-// }
-
 @import "../../../styles/variables.scss";
 
  main {
     display: flex;
-    flex-direction: row; // Coluna ou Linha
+    flex-direction: row; // Elementos em linha horizontal
     height: 100%; // Altura
 
     .login-section {
         flex: 1; // Crescimento flexível para que se ajuste proporcionalmente
         flex-grow: 0.4; // Crescimento flexível, tamanho em proporção, se todos for = 1, todos possuirão o mesmo tamanho.
-        background-color: $primary-color; // Chamando a varíavel importada de variables.css
+        background-color: white; // Cor de fundo
         display: flex;
-        flex-direction: column;
+        flex-direction: column; // Elementos em coluna vertical
         align-items: center; // Alinhamento horizontal (para flex-direction -> column)
         justify-content: center; // Alinhamento vertical (para flex-direction -> column)
         gap: 20px; // Distanciamento entre os elementos
+        padding: 0 35px; // Espaçamento lateral de 35px
 
         .image-container-logo {
-            width: 100%;
+            width: 100%; // Largura
             display: flex;
-            justify-content: center;
+            justify-content: center; // Alinhamento centralizado
         }
 
         img {
-            width: 30%;
+            width: 30%; // Largura
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 20px; // Tamanho da fonte
+        }
+
+        button {
+            width: 100%;
+            border-radius: 8px; // Arredondamento da borda
+            font-size: 16px; // Tamanho da fonte
+            font-weight: 500; // Expessura da fonte
+            border: none; // Sem borda
+            background: transparent; // Cor de fundo
+            padding: 12px 24px; // Altura e Largura
+
+            &.btn-primary { // & -> Pega o buttton
+                background-color: $primary-color; // Cor de fundo
+                color: white; // Cor da letra
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); // Sombra da caixa
+            }
+
+            &.btn-secondary { // & -> Pega o buttton
+                border: 1px solid $primary-color; // Cor de fundo
+                color: $primary-color; // Cor da letra
+            }
         }
     }
 
     .banner-section {
         flex: 1; // Crescimento flexível para que se ajuste proporcionalmente
         flex-grow: 1; // Crescimento flexível, tamanho em proporção, se todos for = 1, todos possuirão o mesmo tamanho.
-        background-color: $banner; // Chamando a varíavel importada de variables.css
+        background-color: $banner; // Chamando a varíavel importada de variables.css // Cor de fundo
         display: flex;
-        flex-direction: row;
+        flex-direction: row; // Elementos em linha horizontal
         align-items: center; // Alinhamento horizontal (para flex-direction -> column)
         justify-content: center; // Alinhamento vertical (para flex-direction -> column
 
         img {
-            height: 100%;
-            width: 70%;
+            height: 100%; // Altura
+            width: 70%; // Largura
         }
     }
 }
