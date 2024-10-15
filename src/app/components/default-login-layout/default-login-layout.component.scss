@@ -11,8 +11,8 @@
         background-color: white; // Cor de fundo
         display: flex;
         flex-direction: column; // Elementos em coluna vertical
-        align-items: center; // Alinhamento horizontal (para flex-direction -> column)
-        justify-content: center; // Alinhamento vertical (para flex-direction -> column)
+        align-items: center; // Alinhamento central
+        justify-content: center; // Alinhamento central
         gap: 20px; // Distanciamento entre os elementos
         padding: 0 35px; // Espaçamento lateral de 35px
 
@@ -26,8 +26,26 @@
             width: 30%; // Largura
         }
 
-        h2 {
-            font-size: 20px; // Tamanho da fonte
+        h3 {
+            margin-top: 45px; // Adiciona espaço(margem) para cima
+            // margin-bottom: 45px; // Adiciona espaço(margem) para baixo
+        }
+
+        .divider {
+            font-size: 16px; // Tamanho da fonte
+            color: $gray-bg; // Cor da letra
+            font-weight: 400; // Expessura da fonte
+            display: flex;
+            align-items: center; // Alinhamento central
+            width: 100%; // Largura 
+            gap: 20px; // Distanciamento entre os elementos
+            text-transform: uppercase; // Transforma o texto para maiúscula
+        
+            div {
+                width: 100%; // Largura 
+                height: 2px; // Altura
+                background-color: $gray-bg; // Cor de fundo
+            }
         }
 
         button {
@@ -38,6 +56,7 @@
             border: none; // Sem borda
             background: transparent; // Cor de fundo
             padding: 12px 24px; // Altura e Largura
+            cursor: pointer; // Ponteiro do cursor
 
             &.btn-primary { // & -> Pega o buttton
                 background-color: $primary-color; // Cor de fundo
