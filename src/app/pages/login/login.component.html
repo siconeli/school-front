@@ -3,7 +3,17 @@
     primaryBtnText="Entrar agora"
     secondaryBtnText="Inscreva-se agora"
 >
-    <form>
-        <p>Oi</p>
+    <form [formGroup]="loginForm">
+        <app-primary-input
+            formName="login"
+            type="text"
+            label="Login"
+            placeHolder="dinossauros"
+        />
+        <app-primary-input
+            formName="password"
+            type="password"
+            label="Senha"
+        />
     </form>
 </app-default-login-layout>
